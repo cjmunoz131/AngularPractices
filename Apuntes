@@ -1,0 +1,13 @@
+//Los Pipes son usados para formatear la data  solamente en la presentacion del html
+@Input @output son decoradores
+Angular segun la condicion agrega o no agrega el ngIf en el appComponents
+Cuando un salida es disparada en on emit
+lo que esta dentro de las comillas
+
+<app-login *ngIf="!logueado"  (onIngresar)=
+Para poder compartir instanacia entre componentes se debe crear servicios antes se usaban los providers y los factory
+al final se crearon con los servicios que son instanacias de las clases los cuales son compartidos entre modulos
+Para subscribir la instancia entre modulos usuario se pone en el appmodule
+Lo que va a hacer angular es enviar la instancia tanto a los modulos en el momento en   ue los componetes se crea
+Esto en el momento de ejecutar el constructor
+
