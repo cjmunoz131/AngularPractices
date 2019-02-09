@@ -1,0 +1,10 @@
+<div class="container-fluid">
+	<app-cabecera *ngIf="vistaAMostrar=='libros'" (onCerrar)="cambiarVista($event)"></app-cabecera>
+</div>
+<div class="container">
+	<app-home *ngIf="vistaAMostrar=='home'" ></app-home>
+	<app-login *ngIf="vistaAMostrar=='login'" ></app-login>
+	<app-registro *ngIf="vistaAMostrar=='registro'" ></app-registro>
+	<app-listado-libros *ngIf="vistaAMostrar=='libros'"></app-listado-libros>
+	<app-edicion-libro *ngIf="vistaAMostrar=='libros'"></app-edicion-libro>
+</div>
