@@ -1,0 +1,9 @@
+<div class="container-fluid">
+	<app-cabecera *ngIf="vistaAMostrar=='libros'"(onCerrar)="cambiarVista($event)"[nombreUsuario]="nombreUsuario"></app-cabecera>
+</div>
+<div class="container">
+  <app-login *ngIf="vistaAMostrar=='login'" (onLogin)="cambiarVista($event)" (onUsuarioLogueado)="nombreUsuario=$event"></app-login>
+  <app-adicionarlibro *ngIf="vistaAMostrar=='libros'"></app-adicionarlibro>
+	<app-listado *ngIf="vistaAMostrar=='libros'"></app-listado>
+
+</div>
