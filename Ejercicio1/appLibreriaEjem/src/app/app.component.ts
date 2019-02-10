@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'appLibreriaEjem';
   vistaAMostrar: string = "home"
+
+
+  cambiarVista(vista: string) {
+		this.vistaAMostrar = vista
+	}
 }
