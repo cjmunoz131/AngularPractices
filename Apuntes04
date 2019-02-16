@@ -1,1 +1,7 @@
 Inicio de la clase 04
+Cuando se instala con npm i pdfmaker --save (el save es para que necesariamente lo ponga en el package json)
+en node modules
+package.json
+npm i 
+
+Para navegacion usamemos RouterLink
