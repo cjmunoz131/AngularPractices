@@ -6,7 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Route } from '@angular/router';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
-import { PerfilComponent } from './perfil/perfil.component'
+import { PerfilComponent } from './perfil/perfil.component';
+import { ListadoComponent } from './listado/listado.component';
+import { EdicionComponent } from './edicion/edicion.component'
 
 const rutas: Array<Route> = [
 	{
@@ -23,6 +25,19 @@ const rutas: Array<Route> = [
 			{
 				path: "perfil",
 				component: PerfilComponent
+			}
+		]
+	},
+	{
+		path: "cursos",
+		children: [
+			{
+				path: "",
+				component: ListadoComponent
+			},
+			{
+				path: "edicion/:id",
+				component: EdicionComponent
 			}
 		]
 	},
@@ -49,7 +64,9 @@ const rutas: Array<Route> = [
 		LoginComponent,
 		HomeComponent,
 		NoEncontradoComponent,
-		PerfilComponent
+		PerfilComponent,
+		ListadoComponent,
+		EdicionComponent
 	],
 	imports: [
 		BrowserModule, RouterModule.forRoot(rutas)

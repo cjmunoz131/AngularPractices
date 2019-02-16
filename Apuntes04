@@ -5,3 +5,4 @@ package.json
 npm i 
 
 Para navegacion usamemos RouterLink
+Todos los parametros son precedidos por el simbolo de : 
