@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { ListadoComponent } from './listado/listado.component';
 import { AdicionarlibroComponent } from './adicionarlibro/adicionarlibro.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
-import { Libros } from './services/libros.component.service';
+import { LibrosService } from './services/libros.component.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { Libros } from './services/libros.component.service';
   imports: [
     BrowserModule
   ],
-  providers: [Libros],
+  providers: [LibrosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

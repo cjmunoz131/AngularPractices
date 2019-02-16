@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LibrosService } from '../services/libros.component.service';
 import { Ilibro } from '../model/ilibro';
-
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
@@ -8,19 +9,16 @@ import { Ilibro } from '../model/ilibro';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private librosService: LibrosService) { }
 
+  suscripcion: Subscription;
+  lstLibros: Array<Ilibro>;
   ngOnInit() {
+    this.suscripcion = this.librosService.onCambioLista.subscribe(
+      libros => this.lstLibros = libros
+    );
   }
+  eliminar() {
 
-  libros: Array<Ilibro> = [
-		{ id: 1, titulo: "Miss Bala",anno: 2019 },
-		{ id: 2, titulo: "Artic",  anno: 2018 },
-		{ id: 3, titulo: "Ek Ladki Ko Dekha Toh Aisa Laga", anno: 2019 },
-		{ id: 4, titulo: "Aquaman", anno: 2018 },
-		{ id: 5, titulo: "Spider-Man: Un nuevo universo", anno: 2018 },
-		{ id: 6, titulo: "Dragon Ball Super: Broly",anno: 2018 },
-		{ id: 7, titulo: "Upside", anno: 2017 }
-  ]
-
-}
+  }
+ }

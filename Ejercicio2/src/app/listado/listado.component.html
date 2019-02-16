@@ -9,11 +9,11 @@
           <th>Eliminar</th>
 				</tr>
 			</thead>
-			<tr *ngFor="let libro of libros">
+			<tr *ngFor="let libro of lstLibros">
 				<td>{{libro.id}}</td>
 				<td>{{libro.titulo}}</td>
         <td>{{libro.anno}}</td>
-        <td><button class="col-4 btn btn-danger">Eliminar</button></td>
+        <td><button class="col-4 btn btn-danger" (click)="eliminar()">Eliminar</button></td>
 			</tr>
 		</table>
 
